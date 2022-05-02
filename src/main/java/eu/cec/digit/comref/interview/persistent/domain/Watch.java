@@ -28,7 +28,7 @@ public class Watch implements Serializable {
     }
 
     @Id
-    @Column(name = "NAME", length = 50)
+    @Column(name = "NAME", length = 50) //Not sure if I could change the length due to possible database limitations
     private String name;
 
     @Column(name = "value")
@@ -38,7 +38,7 @@ public class Watch implements Serializable {
     private Integer sold;
 
     @Column(name = "available")
-    private Boolean available; //Not sure if I could change the type to value due to possible database limitations
+    private Boolean available; //Not sure if I could change the type due to possible database limitations
 
     public String getName() {
         return name;

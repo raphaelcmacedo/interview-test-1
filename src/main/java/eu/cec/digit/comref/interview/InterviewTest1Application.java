@@ -48,7 +48,7 @@ public class InterviewTest1Application implements CommandLineRunner {
 		for(Watch watch : watches) {
 			
 			if(!watch.getAvailable()) {
-				watchRepository.deleteById(watch.getName());
+				this.deleteWatch(watch.getName());
 			}
 		}
 		
