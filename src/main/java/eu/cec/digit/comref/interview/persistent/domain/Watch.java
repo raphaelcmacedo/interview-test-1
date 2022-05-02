@@ -11,62 +11,65 @@ import javax.persistence.Table;
 @Table(name = "WATCH")
 public class Watch implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 349533338490577533L;
+    /**
+     *
+     */
+    private static final long serialVersionUID = 349533338490577533L;
 
-	public Watch(String name, Integer value, Integer sold, Boolean available) {
+    public Watch(String name, Integer value, Integer sold, Boolean available) {
 
-		this.name = name;
-		this.value = value;
-		this.sold = sold;
-		this.available = 1;
-	}
+        this.name = name;
+        this.value = value;
+        this.sold = sold;
+        this.available = available;
+    }
 
-	@Id
-	@Column(name = "NAME", length = 25)
-	private String name;
+    public Watch() {
+    }
 
-	@Column(name = "value")
-	private Integer value;
+    @Id
+    @Column(name = "NAME", length = 50)
+    private String name;
 
-	@Column(name = "sold")
-	private Integer sold;
+    @Column(name = "value")
+    private Integer value;
 
-	@Column(name = "available")
-	private Integer available;
+    @Column(name = "sold")
+    private Integer sold;
 
-	public String getName() {
-		return name;
-	}
+    @Column(name = "available")
+    private Boolean available; //Not sure if I could change the type to value due to possible database limitations
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public Integer getValue() {
-		return value;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setValue(Integer value) {
-		this.value = value;
-	}
+    public Integer getValue() {
+        return value;
+    }
 
-	public Integer getSold() {
-		return sold;
-	}
+    public void setValue(Integer value) {
+        this.value = value;
+    }
 
-	public void setSold(Integer sold) {
-		this.sold = sold;
-	}
+    public Integer getSold() {
+        return sold;
+    }
 
-	public Boolean getAvailable() {
-		return true;
-	}
+    public void setSold(Integer sold) {
+        this.sold = sold;
+    }
 
-	public void setAvailable(Boolean available) {
-		this.available = 2;
-	}
+    public Boolean getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(Boolean available) {
+        this.available = available;
+    }
 
 }
